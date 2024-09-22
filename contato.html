@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contate-nos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo da Fundação Noor Al-Islamia" class="logo">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="nossos-programas.html">Nossos Programas</a></li>
+                <li><a href="doacoes.html">Ajude Agora</a></li>
+                <li><a href="voluntario.html">Torne-se Voluntário</a></li>
+                <li><a href="historias-sucesso.html">Histórias de Sucesso</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="formulario-contato">
+        <h2>Entre em Contato</h2>
+        <form action="enviar-contato.php" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required><br></br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br></br>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br></br>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required><br></br>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <section class="informacoes-contato">
+        <h2>Informações de Contato</h2>
+        <p><strong>Endereço:</strong> Guiné-Bissau, Bairro Militar-Bissau</p>
+        <p><strong>Telefone:</strong> (+245) 955-251-503</p>
+        <p><strong>Telefone:</strong> (+245) 966-781-171</p>
+        <p><strong>Email:</strong> contatoacademia@Al_Islamia.com</p>
+    </section>
+
+    <section class="mapa">
+        <h2>Localização</h2>
+        <!-- Integração com Google Maps para Guiné-Bissau -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197047.08797216048!2d-15.707679947021483!3d11.819551411941214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe54ba16d345b4a9%3A0x4a3f843c4844575!2sGuin%C3%A9-Bissau!5e0!3m2!1spt-BR!2sus!4v1630843283546!5m2!1spt-BR!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Academia Noor Al-Islamia</p>
+    </footer>
+</body>
+</html>

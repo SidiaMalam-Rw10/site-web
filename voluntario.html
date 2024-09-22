@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torne-se Voluntário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo da Fundação Noor Al-Islamia" class="logo">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="nossos-programas.html">Nossos Programas</a></li>
+                <li><a href="doacoes.html">Ajude Agora</a></li>
+                <li><a href="voluntario.html">Torne-se Voluntário</a></li>
+                <li><a href="historias-sucesso.html">Histórias de Sucesso</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        
+        <form action="inscricao.php" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required><br></br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="nome" name="nome" required><br></br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br></br>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="nome" name="nome" required><br></br>
+
+
+            <label for="vaga">Área de Interesse:</label>
+            <select id="vaga" name="vaga">
+                <option value="campo">Em Campo</option>
+                <option value="remoto">Remotamente</option>
+                <option value="expertise">Expertise Técnica</option>
+            </select><br></br>
+
+            <label for="date">Data de Inscricao:</label>
+            <input type="date" id="date" name="date" required><br></br>
+
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Academia Noor Al-Islamia</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude Agora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo da Fundação Noor Al-Islamia" class="logo">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="nossos-programas.html">Nossos Programas</a></li>
+                <li><a href="doacoes.html">Ajude Agora</a></li>
+                <li><a href="voluntario.html">Torne-se Voluntário</a></li>
+                <li><a href="historias-sucesso.html">Histórias de Sucesso</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h2>Contribua para Mudar Vidas</h2>
+        <p>Sua doação faz a diferença na vida de quem mais precisa. Com sua ajuda, podemos continuar apoiando milhares de pessoas em situação precária a encontrar uma nova vida.</p>
+    </section>
+
+    <section class="donation-options">
+        <h2>Opções de Doação</h2>
+        <form action="doacao.php" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="valor">Valor da Doação:</label>
+            <input type="number" id="valor" name="valor" placeholder="Ex: 50" required><br>
+
+            <label for="tipo-doacao">Tipo de Doação:</label>
+            <select id="tipo-doacao" name="tipo-doacao">
+                <option value="financeira">Doação Financeira</option>
+                <option value="material">Doação Material</option>
+                <option value="recorrente">Doação Recorrente</option>
+            </select><br>
+
+            <label for="data-doacao">Data de Doação:</label>
+            <input type="date" id="data-doacao" name="data-doacao" required><br>
+
+            <h3>Método de Pagamento</h3>
+            <label for="tipo-pagamento">Escolha o Método de Pagamento:</label>
+            <select id="tipo-pagamento" name="tipo-pagamento" required>
+                <option value="cartao_credito">Cartão de Crédito</option>
+                <option value="orange_money">Orange Money</option>
+                <option value="wave">Wave</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia_bancaria">Transferência Bancária</option>
+            </select><br>
+
+            <div id="cartao-credito-info" style="display: none;">
+                <label for="numero-cartao">Número do Cartão:</label>
+                <input type="text" id="numero-cartao" name="numero-cartao" placeholder="XXXX-XXXX-XXXX-XXXX"><br>
+
+                <label for="validade-cartao">Validade do Cartão (MM/AAAA):</label>
+                <input type="text" id="validade-cartao" name="validade-cartao" placeholder="MM/AAAA"><br>
+
+                <label for="cvv-cartao">CVV:</label>
+                <input type="text" id="cvv-cartao" name="cvv-cartao" placeholder="123"><br>
+            </div>
+
+            <div id="conta-movel-info" style="display: none;">
+                <label for="numero-conta-movel">Número da Conta (Orange Money):</label>
+                <input type="text" id="numero-conta-movel" name="numero-conta-movel" placeholder="Número da conta"><br>
+            </div>
+
+            <button type="submit">Contribuir</button>
+        </form>
+    </section>
+
+    <section class="transparency">
+        <h2>Transparência</h2>
+        <p>Na Fundação Noor Al-Islamia, garantimos que cada centavo da sua doação seja utilizado da forma mais eficiente possível. Nossos relatórios financeiros estão disponíveis para todos os doadores.</p>
+        <p>Veja como suas contribuições são alocadas:</p>
+        <ul>
+            <li>70%: Programas e serviços diretos</li>
+            <li>20%: Infraestrutura e suporte</li>
+            <li>10%: Arrecadação de fundos e marketing</li>
+        </ul>
+    </section>
+
+    <section class="tax-benefits">
+        <h2>Vantagens Fiscais</h2>
+        <p>Contribuir com nossa fundação pode oferecer benefícios fiscais. Consulte um contador para saber como maximizar as deduções em sua declaração de imposto de renda.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Academia Noor Al-Islamia</p>
+    </footer>
+
+    <script>
+        // Mostrar ou ocultar campos de pagamento com base na seleção do método
+        document.getElementById('tipo-pagamento').addEventListener('change', function () {
+            var cartaoCreditoInfo = document.getElementById('cartao-credito-info');
+            var contaMovelInfo = document.getElementById('conta-movel-info');
+
+            if (this.value === 'cartao_credito') {
+                cartaoCreditoInfo.style.display = 'block';
+                contaMovelInfo.style.display = 'none';
+            } else if (this.value === 'orange_money' || this.value === 'wave') {
+                cartaoCreditoInfo.style.display = 'none';
+                contaMovelInfo.style.display = 'block';
+            } else {
+                cartaoCreditoInfo.style.display = 'none';
+                contaMovelInfo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
