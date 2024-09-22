@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - Boutique de Parfums</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Finaliser la commande</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Détails de votre commande</h2>
+            <p>Produit : <span id="produit-nom"></span></p>
+            <p>Prix : <span id="produit-prix"></span> €</p>
+
+            <h3>Informations de livraison</h3>
+            <form id="commande-form">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="telephone">Telephone :</label>
+                <input type="text" id="telephone" name="telephone" required>
+            
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+            
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            
+                <button type="submit" class="cta">Confirmer la commande</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 modacatita. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+    // Gestion de la soumission du formulaire
+    document.getElementById('commande-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche la soumission par défaut
+
+        // Récupérer les valeurs du formulaire
+        const nom = document.getElementById('nom').value;
+        const telephone = document.getElementById('telephone').value;
+        const adresse = document.getElementById('adresse').value;
+        const email = document.getElementById('email').value;
+        const produit = "Parfum Élégant"; // Exemple, remplacer par le produit actuel
+        const prix = 75; // Exemple, remplacer par le prix actuel
+
+        // Rediriger vers la page de confirmation avec les paramètres
+        window.location.href = `confirmation.html?nom=${nom}&telephone=${telephone}&adresse=${adresse}&email=${email}&produit=${produit}&prix=${prix}`;
+    });
+</script>
+</body>
+</html>

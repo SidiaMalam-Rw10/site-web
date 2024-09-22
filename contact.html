@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Boutique de Parfums</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MODA CATITA</h1>
+        <div class="header-container">
+            <img src="logo.jpg" alt="Logo de la boutique de parfums" class="logo">
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="offres.html">Offres Spéciales</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h2>Nous Contacter</h2>
+            <p>Pour toute question ou commentaire, n'hésitez pas à nous contacter en remplissant le formulaire ci-dessous.</p>
+            
+            <form action="envoyer-message.php" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="cta">Envoyer</button>
+            </form>
+        </section>
+        
+        <section class="contact-info">
+            <h2>Informations de Contact</h2>
+            <p><strong>Email :</strong> contact@modacatita.com</p>
+            <p><strong>Téléphone :</strong> +221 778-354-731</p>
+            <p><strong>Adresse :</strong>Rue-33, Liberte 6 Extension, Dakar</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 modacatita. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

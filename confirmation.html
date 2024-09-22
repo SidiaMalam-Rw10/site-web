@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de commande - Boutique de Parfums</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Confirmation de votre commande</h1>
+    </header>
+
+    <main>
+        <section class="confirmation-message">
+            <h2>Merci pour votre achat, <span id="client-nom"></span> !</h2>
+            <p>Votre commande a bien été enregistrée.</p>
+            <p>Elle sera expédiée à l'adresse suivante :</p>
+            <p><strong>Téléphone :</strong> <span id="client-telephone"></span></p>
+            <p><strong>Adresse :</strong> <span id="client-adresse"></span></p>
+            <p><strong>Email :</strong> <span id="client-email"></span></p>
+
+            <h3>Détails de la commande :</h3>
+            <p><strong>Produit :</strong> <span id="produit-nom"></span></p>
+            <p><strong>Prix :</strong> <span id="produit-prix"></span> €</p>
+
+            <a href="accueil.html" class="cta">Retour à l'accueil</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 modacatita. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Récupérer les données du formulaire depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nom = urlParams.get('nom');
+        const telephone = urlParams.get('telephone');
+        const adresse = urlParams.get('adresse');
+        const email = urlParams.get('email');
+        const produit = urlParams.get('produit');
+        const prix = urlParams.get('prix');
+
+        // Afficher les informations dans la page
+        document.getElementById("client-nom").textContent = nom;
+        document.getElementById("client-telephone").textContent = telephone;
+        document.getElementById("client-adresse").textContent = adresse;
+        document.getElementById("client-email").textContent = email;
+        document.getElementById("produit-nom").textContent = produit;
+        document.getElementById("produit-prix").textContent = prix;
+    </script>
+</body>
+</html>
